@@ -1,13 +1,27 @@
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.3
 import "../../Controls" as Controls
 import QtGraphicalEffects 1.0
+import "../../Theme" 1.0
 
 Item {
 
     id: conversationBox
     property int chatMessageBuffer: 30
     property alias conversationBoxWidth: conversationBox.width
+    function contentEntered(content) {
+
+        conversationModel.append({
+                                     userName: "Me",
+                                     avatar: "../../icons/avatar.svg",
+                                     messageContent: content,
+                                     time: new Date().toLocaleTimeString(
+                                               "hh:mm"),
+                                     isSelf: true
+                                 })
+        conversations.positionViewAtEnd()
+    }
 
     Layout.preferredWidth: 728
     height: parent.height
@@ -22,6 +36,10 @@ Item {
         width: 100
         Layout.preferredHeight: parent.height
         clip: true
+
+        Component.onCompleted: {
+            conversations.positionViewAtEnd()
+        }
 
         delegate: Item {
 
@@ -147,7 +165,7 @@ Item {
         }
 
         ListElement {
-            userName: "Stuge"
+            userName: "Me"
             avatar: "../../icons/avatar.svg"
             messageContent: "He did the research apparently"
             time: "10:25AM"

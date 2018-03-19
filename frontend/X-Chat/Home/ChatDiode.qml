@@ -1,6 +1,9 @@
-import QtQuick 2.0
+import QtQuick 2.7
+import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.3
+
 import "../../Controls" as Controls
+import "../../Theme" 1.0
 
 Controls.Diode {
     id: generalDiode
@@ -15,10 +18,15 @@ Controls.Diode {
         iconOnly: true
         iconSize: 20
     }
+
+
+    /*Controls.DiodeVerticalScrollBar {
+        id: verticalScrollBar
+    }*/
     ColumnLayout {
         spacing: 0
         anchors.top: chatDiodeHeader.bottom
-        anchors.topMargin: 45
+        anchors.topMargin: diodeHeaderHeight
         anchors.fill: parent
 
         RowLayout {
@@ -47,6 +55,12 @@ Controls.Diode {
 
         //Chatbox
         ChatBox {
+            id: chatBoxId
+        }
+
+        Component.onCompleted: {
+            //hey so what we need to do here is connect this chatenter presed to the conversation chat enter pressed
+            chatBoxId.chatEnterPressed.connect(chat.contentEntered)
         }
     }
 } //Row Layout//Image//Rectangle -> chat box//Image

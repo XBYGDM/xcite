@@ -1,6 +1,8 @@
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.3
 import "../../Controls" as Controls
+import "../../Theme" 1.0
 
 
 //Creates and manages a group of channels
@@ -14,10 +16,15 @@ Item {
     property int groupWidth: 200
     property int groupHeight: 47
     property int itemHeight: 29
-
+    property int groupIndex: 0
     height: groupHeight + groupChannels.model.count * itemHeight
     width: groupWidth
 
+    //On channel selected change the color
+    //the parent should connect a listener to this group object
+    //the parent should call another function in the groups with the currentIndex?
+    //This could also work out if we just pass the index along from the start
+    //The other groups should deselect all based on index
     signal channelSelected(int index)
 
     Rectangle {
@@ -49,6 +56,24 @@ Item {
             size: iconSize
             MouseArea {
                 anchors.fill: parent
+                onClicked: {
+                    confirmationModal({
+                                          title: qsTr("REMOVE ADDRESS CONFIRMATION"),
+                                          bodyText: "Enter the name of the ",
+                                          confirmText: qsTr("CONFIRM"),
+                                          cancelText: qsTr("CANCEL"),
+                                          showInput: true
+                                      }, function (modal, inputValue) {
+                                          //OnConfirmed
+                                          if (inputValue !== null
+                                                  && inputValue !== '') {
+                                              items.append({
+                                                               name: inputValue,
+                                                               selected: false
+                                                           })
+                                          }
+                                      })
+                }
             }
         }
     }
@@ -87,7 +112,7 @@ Item {
                         anchors.fill: parent
                         onClicked: {
                             selected = true
-                            group.channelSelected(index)
+                            group.channelSelected(group.groupIndex)
                             channelBackground.color = "#666B78"
                         }
                     }

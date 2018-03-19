@@ -1,15 +1,19 @@
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.3
 import QtGraphicalEffects 1.0
 import "../../Controls" as Controls
+import "../../Theme" 1.0
 
 ColumnLayout {
-
+    id: chatBoxRoot
     Layout.fillWidth: true
     anchors.bottom: parent.bottom
     anchors.left: parent.left
     anchors.right: parent.right
     Layout.preferredHeight: 93
+
+    signal chatEnterPressed(string val)
 
     Rectangle {
         Layout.fillWidth: true
@@ -35,7 +39,9 @@ ColumnLayout {
                 cursorShape: Qt.PointingHandCursor
             }
         }
+
         /*Controls.ButtonIcon {
+
             id: messageChatButton
             width: parent.height
             imageSource: "../../icons/circle-cross.svg"
@@ -49,7 +55,7 @@ ColumnLayout {
             id: chatInput
             color: "#A9AAAD"
             font.pixelSize: 18
-            text: qsTr("Write something here...")
+            text: ""
             //Layout.preferredWidth: 909
             Layout.fillWidth: true
             Layout.preferredHeight: 56
@@ -58,6 +64,19 @@ ColumnLayout {
             anchors.leftMargin: 15
             anchors.right: messageEmojiButton.left
             anchors.rightMargin: 15
+
+            Keys.onEnterPressed: {
+                if (chatInput.text != '') {
+                    chatBoxRoot.chatEnterPressed(chatInput.text)
+                    chatInput.text = ''
+                }
+            }
+            Keys.onReturnPressed: {
+                if (chatInput.text != '') {
+                    chatBoxRoot.chatEnterPressed(chatInput.text)
+                    chatInput.text = ''
+                }
+            }
         }
 
         Image {
