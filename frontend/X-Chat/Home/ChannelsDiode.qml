@@ -1,6 +1,7 @@
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import "../../Controls" as Controls
+import "../../Theme" 1.0
 
 Controls.Diode {
     id: channelsDiode
@@ -24,9 +25,8 @@ Controls.Diode {
 
         ListView {
             id: channelList
-            interactive: false
+            //interactive: false
             model: groupModel
-
             anchors.left: parent.left
 
             clip: true
@@ -36,12 +36,14 @@ Controls.Diode {
             delegate: ChannelGroup {
                 anchors.left: parent.left
                 groupText: model.groupName
+                groupIndex: index
                 iconSource: "../../icons/circle-cross.svg"
                 items: model.channels
                 iconSize: 19
                 groupHeight: 47
                 groupWidth: parent.width
             }
+            function channelSelected() {}
         }
 
         //Representation of all the channel groups and channels

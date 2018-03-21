@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.3
 ModalPopup {
     property alias confirmText: btnConfirm.labelText
     property alias cancelText: btnCancel.labelText
+    property alias showInput: inputField.visible
 
     signal confirmed(string val)
     signal cancelled
