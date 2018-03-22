@@ -55,11 +55,12 @@ Item {
             imageSource: iconSource
             size: iconSize
             MouseArea {
+                cursorShape: Qt.PointingHandCursor
                 anchors.fill: parent
                 onClicked: {
                     confirmationModal({
                                           title: qsTr("REMOVE ADDRESS CONFIRMATION"),
-                                          bodyText: "Enter the name of the ",
+                                          bodyText: "Enter a channel name to add ",
                                           confirmText: qsTr("CONFIRM"),
                                           cancelText: qsTr("CANCEL"),
                                           showInput: true
@@ -109,6 +110,7 @@ Item {
                     }
 
                     MouseArea {
+                        cursorShape: Qt.PointingHandCursor
                         anchors.fill: parent
                         onClicked: {
                             selected = true

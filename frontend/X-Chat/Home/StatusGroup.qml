@@ -70,7 +70,7 @@ Item {
 
                             Image {
                                 anchors.fill: parent
-                                // source: avatar
+                                source: avatar
                             }
 
                             Rectangle {
@@ -121,6 +121,7 @@ Item {
                         }
                     }
                     MouseArea {
+                        cursorShape: Qt.PointingHandCursor
                         anchors.fill: parent
                         onClicked: {
                             selected = true

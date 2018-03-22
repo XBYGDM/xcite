@@ -46,14 +46,14 @@ Item {
                     name: "Bojack"
                     status: "busy"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
 
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 }
             ]
         }
@@ -64,20 +64,20 @@ Item {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "unavailable"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
 
                 ListElement {
                     name: "Stuge"
                     status: "busy"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 }
             ]
         }
@@ -89,157 +89,157 @@ Item {
                     name: "Bojack"
                     status: "busy"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "unavailable"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "busy"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "busy"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Bojack"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 },
                 ListElement {
                     name: "Stuge"
                     status: "available"
                     selected: false
-                    avatar: "../../icons/avatar.svg"
+                    avatar: "../../icons/chat-avatar-1.png"
                 }
             ]
         }

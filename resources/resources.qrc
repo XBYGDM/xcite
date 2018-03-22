@@ -92,5 +92,7 @@
         <file>icons/Star.svg</file>
         <file>icons/Rectangle7.png</file>
         <file>icons/Rectangle8.png</file>
+        <file>icons/chat-avatar-1.png</file>
+        <file>icons/chat-avatar-2.png</file>
     </qresource>
 </RCC>
