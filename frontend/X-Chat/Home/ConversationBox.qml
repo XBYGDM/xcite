@@ -23,6 +23,11 @@ Item {
         conversations.positionViewAtEnd()
     }
 
+    function conversationStarted(id) {
+        conversations.model = (id === 1 ? stugeModel : bojackModel)
+        conversationModel.clear()
+    }
+
     Layout.preferredWidth: 728
     height: parent.height
 
@@ -138,6 +143,28 @@ Item {
                     }
                 }
             }
+        }
+    }
+
+    ListModel {
+        id: stugeModel
+        ListElement {
+            userName: "Stuge"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Hey! How's it going?"
+            time: "10:25AM"
+            isSelf: false
+        }
+    }
+
+    ListModel {
+        id: bojackModel
+        ListElement {
+            userName: "Bojack"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "It's been a while since we talked"
+            time: "10:25AM"
+            isSelf: false
         }
     }
 

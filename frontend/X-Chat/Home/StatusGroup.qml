@@ -14,6 +14,8 @@ Item {
     height: groupHeight + groupChannels.model.count * itemHeight
     width: parent.width
 
+    signal conversationStarted(int id)
+
     Rectangle {
 
         id: groupRect
@@ -125,6 +127,7 @@ Item {
                         anchors.fill: parent
                         onClicked: {
                             selected = true
+                            conversationStarted(name == "Stuge" ? 1 : 2)
                         }
                     }
                 }
