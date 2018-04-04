@@ -71,7 +71,12 @@ ListView {
 
     function removeSelected() {
         if (currentItem) {
-            model.remove(currentIndex)
+            var idxToRemove = currentIndex
+
+            // Prevent highlight flicker
+            currentIndex--
+
+            model.remove(idxToRemove)
         }
     }
 }
