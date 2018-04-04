@@ -26,6 +26,12 @@ Item {
     smooth: true
     z: 100
 
+    MouseArea {
+        propagateComposedEvents: false
+        anchors.fill: parent
+        hoverEnabled: true
+    }
+
     Connections {
         target: header
         onTabChanged: {
@@ -53,7 +59,7 @@ Item {
             name: "full"
             PropertyChanges {
                 target: xChatPopup
-                height: 639
+                height: xcite.height < 700 ? xcite.height - 50 : 639
             }
         }
     ]
@@ -344,6 +350,7 @@ Item {
         anchors.fill: innerPopupContainer
         horizontalOffset: -5
         verticalOffset: -5
+        cached: true
         radius: 10
         samples: 20
         source: innerPopupContainer

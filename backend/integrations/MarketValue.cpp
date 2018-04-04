@@ -3,7 +3,6 @@
 
 MarketValue::MarketValue(QObject *parent) : QObject(parent)
 {
-
 }
 
 void MarketValue::findXBYValue()
