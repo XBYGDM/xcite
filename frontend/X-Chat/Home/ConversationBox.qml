@@ -14,7 +14,7 @@ Item {
 
         conversationModel.append({
                                      userName: "Me",
-                                     avatar: "../../icons/avatar.svg",
+                                     avatar: "../../icons/chat-avatar-2.png",
                                      messageContent: content,
                                      time: new Date().toLocaleTimeString(
                                                "hh:mm"),
@@ -22,6 +22,11 @@ Item {
                                  })
         conversations.positionViewAtEnd()
     }
+    function conversationStarted(id) {
+        conversations.model = (id === 1 ? stugeModel : bojackModel)
+        conversationModel.clear()
+    }
+
 
     Layout.preferredWidth: 728
     height: parent.height
@@ -64,9 +69,10 @@ Item {
                         id: messageBlockChatImage
                         height: 50
 
-                        //source: avatar
+                        source: avatar
                         clip: true
                         fillMode: Image.PreserveAspectCrop
+                        anchors.fill: parent
                         layer.enabled: true
                         layer.effect: OpacityMask {
                             maskSource: mask
@@ -141,103 +147,119 @@ Item {
     }
 
     ListModel {
+        id: stugeModel
+        ListElement {
+            userName: "Stuge"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Hey! How's it going?"
+            time: "10:25AM"
+            isSelf: false
+        }
+    }
+
+    ListModel {
+        id: bojackModel
+        ListElement {
+            userName: "Bojack"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "It's been a while since we talked"
+            time: "10:25AM"
+            isSelf: false
+        }
+    }
+
+    ListModel {
         id: conversationModel
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "some message going to the user"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Hey! How's it going?"
             time: "10:25AM"
             isSelf: false
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparently"
+            avatar: "../../icons/chat-avatar-2.png"
+            messageContent: "Great, how are you?"
             time: "10:25AM"
-            isSelf: false
+            isSelf: true
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "I'm super excited about the Xcite wallet!"
             time: "10:25AM"
             isSelf: false
         }
 
         ListElement {
             userName: "Me"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparently"
+            avatar: "../../icons/chat-avatar-2.png"
+            messageContent: "Me too! Especially the fancy new chat section"
             time: "10:25AM"
             isSelf: true
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Definitely, it's beautiful."
             time: "10:25AM"
             isSelf: false
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Did you notice the price of XBY is going up?"
             time: "10:25AM"
             isSelf: false
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Hey! How's it going?"
             time: "10:25AM"
             isSelf: false
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-2.png"
+            messageContent: "Great, how are you?"
+            time: "10:25AM"
+            isSelf: true
+        }
+        ListElement {
+            userName: "Stuge"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "I'm super excited about the Xcite wallet!"
+            time: "10:25AM"
+            isSelf: false
+        }
+
+        ListElement {
+            userName: "Me"
+            avatar: "../../icons/chat-avatar-2.png"
+            messageContent: "Me too! Especially the fancy new chat section"
+            time: "10:25AM"
+            isSelf: true
+        }
+        ListElement {
+            userName: "Stuge"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Definitely, it's beautiful."
             time: "10:25AM"
             isSelf: false
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Did you notice the price of XBY is going up?"
             time: "10:25AM"
             isSelf: false
         }
         ListElement {
             userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
-            time: "10:25AM"
-            isSelf: false
-        }
-        ListElement {
-            userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
-            time: "10:25AM"
-            isSelf: false
-        }
-        ListElement {
-            userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
-            time: "10:25AM"
-            isSelf: false
-        }
-        ListElement {
-            userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
-            time: "10:25AM"
-            isSelf: false
-        }
-        ListElement {
-            userName: "Stuge"
-            avatar: "../../icons/avatar.svg"
-            messageContent: "He did the research apparentlyasdasdasdasdasdadasd"
+            avatar: "../../icons/chat-avatar-1.png"
+            messageContent: "Test Input"
             time: "10:25AM"
             isSelf: false
         }

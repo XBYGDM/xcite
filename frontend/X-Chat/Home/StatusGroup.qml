@@ -14,6 +14,8 @@ Item {
     height: groupHeight + groupChannels.model.count * itemHeight
     width: parent.width
 
+    signal conversationStarted(int id)
+
     Rectangle {
 
         id: groupRect
@@ -70,7 +72,7 @@ Item {
 
                             Image {
                                 anchors.fill: parent
-                                // source: avatar
+                                source: avatar
                             }
 
                             Rectangle {
@@ -121,9 +123,11 @@ Item {
                         }
                     }
                     MouseArea {
+                        cursorShape: Qt.PointingHandCursor
                         anchors.fill: parent
                         onClicked: {
                             selected = true
+                            conversationStarted(name == "Stuge" ? 1 : 2)
                         }
                     }
                 }

@@ -19,7 +19,6 @@ Controls.Diode {
         iconSize: 20
     }
 
-
     /*Controls.DiodeVerticalScrollBar {
         id: verticalScrollBar
     }*/
@@ -34,13 +33,14 @@ Controls.Diode {
             //Layout.fillWidth: true
             ConversationBox {
 
-                id: chat
+                id: conversationBoxId
                 // color: "green"
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 z: 10
                 //Layout.preferredHeight: 720
             }
+
             Rectangle {
                 Layout.preferredWidth: 1
                 Layout.preferredHeight: 704
@@ -51,6 +51,10 @@ Controls.Diode {
             StatusBox {
                 id: status
             }
+            Component.onCompleted: {
+                status.conversationStarted.connect(
+                            conversationBoxId.conversationStarted)
+            }
         }
 
         //Chatbox
@@ -60,7 +64,7 @@ Controls.Diode {
 
         Component.onCompleted: {
             //hey so what we need to do here is connect this chatenter presed to the conversation chat enter pressed
-            chatBoxId.chatEnterPressed.connect(chat.contentEntered)
+            chatBoxId.chatEnterPressed.connect(conversationBoxId.contentEntered)
         }
     }
 } //Row Layout//Image//Rectangle -> chat box//Image

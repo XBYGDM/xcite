@@ -19,12 +19,15 @@ Item {
     property int groupIndex: 0
     height: groupHeight + groupChannels.model.count * itemHeight
     width: groupWidth
+<<<<<<< HEAD
 
     //On channel selected change the color
     //the parent should connect a listener to this group object
     //the parent should call another function in the groups with the currentIndex?
     //This could also work out if we just pass the index along from the start
     //The other groups should deselect all based on index
+=======
+>>>>>>> xchat-ReBranch
     signal channelSelected(int index)
 
     Rectangle {
@@ -55,11 +58,12 @@ Item {
             imageSource: iconSource
             size: iconSize
             MouseArea {
+                cursorShape: Qt.PointingHandCursor
                 anchors.fill: parent
                 onClicked: {
                     confirmationModal({
                                           title: qsTr("REMOVE ADDRESS CONFIRMATION"),
-                                          bodyText: "Enter the name of the ",
+                                          bodyText: "Enter a channel name to add ",
                                           confirmText: qsTr("CONFIRM"),
                                           cancelText: qsTr("CANCEL"),
                                           showInput: true
@@ -68,6 +72,7 @@ Item {
                                           if (inputValue !== null
                                                   && inputValue !== '') {
                                               items.append({
+                                                               channelId: items.get(items.count - 1).channelId + 1,
                                                                name: inputValue,
                                                                selected: false
                                                            })
@@ -95,7 +100,7 @@ Item {
 
                 Rectangle {
                     id: channelBackground
-                    color: "transparent"
+                    color: selected ? "#666B78" : "transparent"
                     width: parent.width
                     height: itemHeight
 
@@ -109,11 +114,11 @@ Item {
                     }
 
                     MouseArea {
+                        cursorShape: Qt.PointingHandCursor
                         anchors.fill: parent
                         onClicked: {
                             selected = true
-                            group.channelSelected(group.groupIndex)
-                            channelBackground.color = "#666B78"
+                            group.channelSelected(channelId)
                         }
                     }
                 }
