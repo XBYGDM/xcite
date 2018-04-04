@@ -19,15 +19,7 @@ Item {
     property int groupIndex: 0
     height: groupHeight + groupChannels.model.count * itemHeight
     width: groupWidth
-<<<<<<< HEAD
 
-    //On channel selected change the color
-    //the parent should connect a listener to this group object
-    //the parent should call another function in the groups with the currentIndex?
-    //This could also work out if we just pass the index along from the start
-    //The other groups should deselect all based on index
-=======
->>>>>>> xchat-ReBranch
     signal channelSelected(int index)
 
     Rectangle {
